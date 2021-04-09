@@ -20,7 +20,7 @@ x, y = clean_data(ds)
 
 # TODO: Split data into train and test sets.
 
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.20)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.20,random_state=123)
 run = Run.get_context()
 
 def clean_data(data):
