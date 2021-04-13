@@ -35,8 +35,3 @@ The following work could be done to enhance the hyperdrive model:
 2. Try other models than logistic regressions
 3. Proceed with more intelligent feature engineering
 4. Optimize the max_total_run to test more hyperparameters
-
-
-## Proof of cluster clean up
-**If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
-**Image of cluster marked for deletion**
