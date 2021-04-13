@@ -8,12 +8,17 @@ This model is then compared to an Azure AutoML run.
 ## Summary
 **In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
 
-**In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
+This dataset contains data about individual banking information. We seek to predict whether or not, an individual would have their loan approved. The best performing model was a voting ensemble**
 
 ## Scikit-learn Pipeline
-**Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
+The first model trained was fitted using the following pipeline:
 
-**What are the benefits of the parameter sampler you chose?**
+1. Load the data from a `.csv` using the `TabularDatasetFactory` class
+2. Clean the data and proceed with variable encoding
+3. Split the data into a `train` and `test` pandas dataframe
+4. Proceed with a logistic regression (with the hyperparameter `C` (penalization parameter) optimized using a random search from the uniform distribution between 0 and 50)
+
+The random search for hyperparameter tuning allows for a faster optimization. By experience, the gain from using other hyperparameter techniques for only 1 parameter is marginal. 
 
 **What are the benefits of the early stopping policy you chose?**
 
@@ -22,6 +27,12 @@ This model is then compared to an Azure AutoML run.
 
 ## Pipeline comparison
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
+
+0.9121 logistic avec hyperdrive
+
+0.9149 voting ensemble
+
+
 
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
