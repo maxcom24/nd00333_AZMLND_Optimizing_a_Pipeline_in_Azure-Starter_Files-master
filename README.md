@@ -35,3 +35,6 @@ The following work could be done to enhance the hyperdrive model:
 2. Try other models than logistic regressions
 3. Proceed with more intelligent feature engineering
 4. Optimize the max_total_run to test more hyperparameters
+
+## Delete compute cluster
+AmlCompute(workspace=ws , name="cpu-cluster").delete()
